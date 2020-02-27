@@ -7,7 +7,7 @@
 </head>
 <body>
 <form action="form.php" method="post">
-    <input placeholder="voer je e-mail adres in" type="text" name="email">
+    <input placeholder="voer je e-mail adres in" type="email" name="email">
     <input type="submit" value="Verstuur" name="submit">
 </form>
 
@@ -15,7 +15,7 @@
 
 $email = $_POST["email"];
 
-if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo "dit is een echt email";
 }else{
     echo "dit is geen email";
